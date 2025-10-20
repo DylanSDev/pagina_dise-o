@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gestión de Procesos | Arca Continental</title>
+    <title>TFI Diseño de Sistemas | Sistema ColdTrack</title>
     <link rel="stylesheet" href="./styles/index.css" />
     <link
       rel="icon"
@@ -14,16 +14,13 @@
   <body>
     <nav class="navbar">
       <div class="nav-container">
-        <a href="#inicio" class="nav-logo">Gestión - Grupo 18</a>
+        <a href="#inicio" class="nav-logo">ColdTrack - Grupo Nº7</a>
         <div class="nav-menu">
           <a href="#inicio" class="nav-link">Inicio</a>
-          <a href="#la-materia" class="nav-link">La Materia</a>
-          <div class="nav-dropdown">
-            <button class="nav-link dropdown-toggle">Trabajos Prácticos</button>
-            <div class="dropdown-menu">
-              <a href="./pages/tp1.html" class="dropdown-item">TP N°1: BPMN</a>
-            </div>
-          </div>
+          <a href="#la-materia" class="nav-link">El Sistema</a>
+          <a href="./pages/diagramas_colaboracion.html" class="nav-link"
+            >Diagramas de Colaboración</a
+          >
         </div>
         <div class="nav-toggle">
           <span></span>
@@ -38,17 +35,16 @@
         <div class="hero-container">
           <div class="hero-badge">Universidad Tecnológica Nacional</div>
           <h1 class="hero-title">
-            Gestión de Procesos de Negocio
-            <span class="text-primary">- Grupo 18</span>
+            Diseño de Sistemas de Información
+            <span class="text-primary">- Sistema ColdTrack</span>
           </h1>
           <p class="hero-description">
-            Pagina web del grupo Nº18, donde se presentaran los trabajos
-            prácticos hechos a lo largo del año.
+            Documentación del Trabajo Final Integrador: Sistema ColdTrack,
+            desarrollado para Arca Continental S.A. en la Cátedra de Diseño de
+            Sistemas.
           </p>
           <div class="hero-buttons">
-            <a href="#trabajos-practicos" class="btn btn-primary"
-              >Trabajos Prácticos</a
-            >
+            <a href="#documentos" class="btn btn-primary">Documentación TFI</a>
             <a href="#integrantes" class="btn btn-outline">Conocer al Equipo</a>
           </div>
         </div>
@@ -57,10 +53,10 @@
       <section id="la-materia" class="intro-section section">
         <div class="container">
           <div class="section-header">
-            <h2>¿Qué es la Gestión de Procesos de Negocio (BPM)?</h2>
+            <h2>El Sistema ColdTrack</h2>
             <p>
-              Una disciplina para modelar, analizar y optimizar los procesos de
-              una organización.
+              Solución de Ingeniería para la Gestión de Equipos de Frío de Arca
+              Continental.
             </p>
           </div>
           <div class="intro-grid">
@@ -83,11 +79,12 @@
                   <line x1="2.27" y1="9" x2="21.73" y2="9" />
                 </svg>
               </div>
-              <h3>El Enfoque Tradicional</h3>
+              <h3>El Problema Actual</h3>
               <p>
-                Las organizaciones con estructuras verticales y jerárquicas a
-                menudo sufren de falta de visibilidad global, ineficiencias
-                ocultas y demoras en la comunicación entre departamentos.
+                El proceso manual de reparación de equipos de frío en Arca
+                Continental es propenso a errores, genera retrasos en la
+                documentación física y dificulta el seguimiento en tiempo real
+                del estado de las solicitudes.
               </p>
             </div>
             <div class="intro-card solution">
@@ -107,20 +104,20 @@
                   <path d="M3.34 19a10 10 0 1 1 17.32 0" />
                 </svg>
               </div>
-              <h3>La Solución: Enfoque por Procesos</h3>
+              <h3>La Solución: ColdTrack</h3>
               <p>
-                BPM propone una gestión centrada en los procesos de negocio, lo
-                que permite incrementar la eficiencia, adaptarse a los cambios y
-                mejorar la comunicación, la productividad y la calidad del
-                servicio.
+                Desarrollar un sistema automatizado que digitalice la gestión de
+                órdenes, agilice el flujo de trabajo y permita la detección
+                temprana de fallas a través del dispositivo ColdTrack para
+                mejorar la satisfacción del cliente.
               </p>
             </div>
           </div>
           <div class="intro-summary">
             <p>
-              Nuestro objetivo es transformar la teoría de BPM en soluciones
-              prácticas, alineando los procesos con los objetivos estratégicos
-              de Arca Continental.
+              Nuestro objetivo es aplicar metodologías de diseño y patrones
+              arquitectónicos para ofrecer una solución robusta y eficiente a
+              los procesos de negocio de Arca Continental.
             </p>
           </div>
         </div>
@@ -129,8 +126,11 @@
       <section id="integrantes" class="content-structure section">
         <div class="container">
           <div class="section-header">
-            <h2>Nuestro Equipo - Grupo 18</h2>
-            <p>El equipo detrás de los proyectos.</p>
+            <h2>Nuestro Equipo - Grupo TFI</h2>
+            <p>
+              El equipo detrás del diseño e implementación del proyecto
+              ColdTrack.
+            </p>
           </div>
           <div class="structure-grid">
             <div class="structure-card">
@@ -147,7 +147,23 @@
                   <circle cx="12" cy="7" r="4" />
                 </svg>
               </div>
-              <h3>Autino, Matías Daniel</h3>
+              <h3>Albarracín, Ulises</h3>
+            </div>
+            <div class="structure-card">
+              <div class="card-icon">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                  <circle cx="12" cy="7" r="4" />
+                </svg>
+              </div>
+              <h3>Cáceres, Xavier</h3>
             </div>
             <div class="structure-card">
               <div class="card-icon">
@@ -179,7 +195,7 @@
                   <circle cx="12" cy="7" r="4" />
                 </svg>
               </div>
-              <h3>Saavedra, Mariana</h3>
+              <h3>Diaz, Johana</h3>
             </div>
             <div class="structure-card">
               <div class="card-icon">
@@ -195,33 +211,17 @@
                   <circle cx="12" cy="7" r="4" />
                 </svg>
               </div>
-              <h3>Vergara, Atilio Leonel</h3>
-            </div>
-            <div class="structure-card">
-              <div class="card-icon">
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                >
-                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
-                  <circle cx="12" cy="7" r="4" />
-                </svg>
-              </div>
-              <h3>Zato Sosa, Celina Abigail</h3>
+              <h3>Vilariño, Bruno</h3>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="trabajos-practicos" class="patterns-section section">
+      <section id="documentos" class="patterns-section section">
         <div class="container">
           <div class="section-header">
-            <h2>Trabajos Prácticos</h2>
-            <p>Los trabajos prácticos que se desarollarón durante el año.</p>
+            <h2>Documentos del TFI</h2>
+            <p>Documentación y artefactos clave del proyecto ColdTrack.</p>
           </div>
           <div class="patterns-grid">
             <div class="pattern-card">
@@ -236,29 +236,26 @@
                     stroke-width="2"
                   >
                     <path
-                      d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"
+                      d="M10 13a5 5 0 0 0 7.54.54l3.5-3.5a2 2 0 0 0 0-2.83l-3.5-3.5a2 2 0 0 0-2.83 0L6.77 11.77a6 6 0 0 0 0 8.49l.65.65A1 1 0 0 0 8 21h8"
                     />
-                    <polyline points="14 2 14 8 20 8" />
-                    <line x1="16" y1="13" x2="8" y2="13" />
-                    <line x1="16" y1="17" x2="8" y2="17" />
-                    <line x1="10" y1="9" x2="8" y2="9" />
+                    <path d="M12 21a9 9 0 0 1-9-9 9 9 0 0 1 9-9" />
                   </svg>
                 </div>
                 <div>
-                  <h3>Trabajo Práctico Nº1</h3>
-                  <span class="pattern-number">Modelado BPMN</span>
+                  <h3>Entregable Evolutivo</h3>
+                  <span class="pattern-number">Carpeta del Proyecto</span>
                 </div>
               </div>
               <p>
-                Relevamiento y modelado del proceso actual, que depende de
-                documentación física y validaciones manuales, generando demoras
-                y riesgos de pérdida de información.
+                Acceso a la carpeta principal del proyecto para visualizar el el
+                desarrollo del proyecto, sus evoluciones y cambios. <br />
+                (Ultimos Cambios: Se agregaron los diagramas de interacción)
               </p>
-              <a href="./pages/tp1.html" class="btn btn-primary btn-full"
-                >Ver Trabajo</a
+              <a href="#" class="btn btn-primary btn-full" target="_blank"
+                >Ver Carpeta</a
               >
             </div>
-            <div class="pattern-card disabled">
+            <div class="pattern-card">
               <div class="pattern-header">
                 <div class="pattern-icon">
                   <svg
@@ -269,43 +266,29 @@
                     stroke="currentColor"
                     stroke-width="2"
                   >
-                    <line x1="12" y1="5" x2="12" y2="19" />
-                    <line x1="5" y1="12" x2="19" y2="12" />
+                    <circle cx="12" cy="5" r="3" />
+                    <path d="M7 19h10" />
+                    <path d="M12 22v-3" />
+                    <path d="M6 13l2-2" />
+                    <path d="M18 13l-2-2" />
+                    <path d="M12 8v3" />
                   </svg>
                 </div>
                 <div>
-                  <h3>Trabajo Práctico Nº2</h3>
-                  <span class="pattern-number">Proximamente</span>
+                  <h3>Diagramas de Colaboración</h3>
+                  <span class="pattern-number">Diseño de Interacción</span>
                 </div>
               </div>
-              <p>Proximamente...</p>
-              <a href="#" class="btn btn-primary btn-full" target="_blank"
-                >Proximamente</a
-              >
-            </div>
-            <div class="pattern-card disabled">
-              <div class="pattern-header">
-                <div class="pattern-icon">
-                  <svg
-                    width="20"
-                    height="20"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  >
-                    <line x1="12" y1="5" x2="12" y2="19" />
-                    <line x1="5" y1="12" x2="19" y2="12" />
-                  </svg>
-                </div>
-                <div>
-                  <h3>Trabajo Práctico Nº3</h3>
-                  <span class="pattern-number">Proximamente</span>
-                </div>
-              </div>
-              <p>Proximamente...</p>
-              <a href="#" class="btn btn-primary btn-full" target="_blank"
-                >Proximamente</a
+              <p>
+                Representación de la interacción dinámica entre los objetos del
+                sistema para la realización de una tarea o Caso de Uso,
+                incluyendo sus responsabilidades.
+              </p>
+              <a
+                href="TFI_1er_Avance.pdf"
+                class="btn btn-primary btn-full"
+                target="_blank"
+                >Ver Diagramas</a
               >
             </div>
           </div>
@@ -325,8 +308,8 @@
           </div>
         </div>
         <div class="footer-right">
-          <p class="group-name">Grupo N°18</p>
-          <p class="subject-name">Cátedra de Gestión y Proceso de Negocio</p>
+          <p class="group-name">Grupo N° 7 TFI (3K02)</p>
+          <p class="subject-name">Cátedra de Diseño de Sistemas</p>
           <p class="year">2025</p>
         </div>
       </div>

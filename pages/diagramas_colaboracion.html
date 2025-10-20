@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Diagramas de Colaboración | ColdTrack</title>
+    <link rel="stylesheet" href="../styles/index.css" />
+    <style>
+      .diagram-section {
+        border-top: 1px solid var(--border);
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+      }
+
+      .diagram-step {
+        margin-bottom: 3rem;
+        background-color: var(--card);
+        padding: 2rem;
+        border-radius: 0.5rem;
+        border-left: 4px solid var(--primary);
+      }
+
+      .diagram-step h4 {
+        color: var(--primary);
+        font-weight: 600;
+        margin-bottom: 1rem;
+        font-size: 1.25rem;
+      }
+
+      .diagram-content img {
+        max-width: 100%;
+        height: auto;
+        border: 1px solid var(--border);
+        border-radius: 0.5rem;
+        margin: 1.5rem 0;
+      }
+
+      .diagram-content p {
+        color: var(--muted-foreground);
+        font-size: 0.95rem;
+        line-height: 1.6;
+      }
+
+      .diagram-content .card-img {
+        padding: 1rem;
+        background-color: var(--section-bg-darker);
+      }
+    </style>
+    <link
+      rel="icon"
+      href="https://frt.utn.edu.ar/wp-content/uploads/2025/09/cropped-favicom-1-192x192.png"
+      sizes="192x192"
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="index.html" class="nav-logo">ColdTrack - Grupo Nº7</a>
+        <div class="nav-menu">
+          <a href="../index.html" class="nav-link">Inicio</a>
+          <a href="../index.html#la-materia" class="nav-link">El Sistema</a>
+          <a href="#" class="nav-link">Diagramas de Colaboración</a>
+        </div>
+        <div class="nav-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <section class="section">
+        <div class="container">
+          <div class="section-header">
+            <h1 class="hero-title">
+              Diagramas de Colaboración
+              <span class="text-primary">Diseño del Comportamiento</span>
+            </h1>
+            <p
+              class="hero-description"
+              style="max-width: 800px; margin: 0.5rem auto 0"
+            >
+              Los Diagramas de Colaboración son artefactos fundamentales de la
+              Fase de Elaboración que describen cómo los objetos interactúan
+              para realizar las operaciones del sistema.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="diagram-section intro-section"
+        style="min-height: auto; padding: 4rem 1rem"
+      >
+        <div class="container">
+          <div class="section-header">
+            <h2>Relación entre Artefactos de Diseño</h2>
+          </div>
+          <div class="intro-grid" style="margin-top: 0">
+            <div class="intro-card problem">
+              <div class="intro-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"
+                  />
+                  <polyline points="14 2 14 8 20 8" />
+                  <line x1="16" y1="13" x2="8" y2="13" />
+                  <line x1="16" y1="17" x2="8" y2="17" />
+                  <line x1="10" y1="9" x2="8" y2="9" />
+                </svg>
+              </div>
+              <h3>Punto de Partida: Contratos y Casos de Uso</h3>
+              <p style="text-align: justify">
+                Los Diagramas de Colaboración se diseñan a partir de lo definido
+                en los Contratos de Operación del Sistema, que se elaboran a
+                partir de los Diagramas de Secuencia. <br />
+                Los Casos de Uso indican los eventos del sistema (operaciones)
+                que se convierten en el mensaje inicial de cada diagrama.
+              </p>
+            </div>
+            <div class="intro-card solution">
+              <div class="intro-icon">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                </svg>
+              </div>
+              <h3>Asignación de Responsabilidades: Patrones GRASP</h3>
+              <p style="text-align: justify">
+                La asignación de responsabilidades es el paso crucial del
+                diseño. Se aplican los Patrones GRASP (Patrones Generales de
+                Asignación de Responsabilidades en Software) para elaborar un
+                buen diseño. <br />
+                Esto guía la elección de qué clase (Cliente,
+                AdministradorDeFrio, etc.) debe realizar cada tarea, como crear
+                instancias o modificar atributos.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="content-structure section"
+        style="
+          min-height: auto;
+          padding: 4rem 1rem;
+          background-color: var(--background);
+        "
+      >
+        <div class="container">
+          <div class="section-header" style="margin-bottom: 2rem">
+            <h2>DC en el Sistema ColdTrack</h2>
+            <p>
+              El Modelo de Dominio de ColdTrack es la base de los objetos que
+              interactuarán. Aplicando patrones de diseño, se define cómo serán
+              las interacciones de las clases del sistema. El objetivo es
+              cumplir las postcondiciones de los contratos (creación de
+              instancias, modificación de atributos y formación de
+              asociaciones).
+            </p>
+          </div>
+        </div>
+        <div>
+          <iframe
+            frameborder="0"
+            style="width: 100%; height: 996px"
+            src="https://viewer.diagrams.net/?tags=%7B%7D&lightbox=1&highlight=0000ff&edit=_blank&layers=1&nav=1&title=Copia%20de%20Modelo_de_Dominio.drawio&dark=0#Uhttps%3A%2F%2Fdrive.google.com%2Fuc%3Fid%3D1BUzoo6SyUYn2RcNssK99rlKObpBd8g0w%26export%3Ddownload"
+          ></iframe>
+        </div>
+      </section>
+
+      <div class="container">
+        <section class="diagram-section" id="uc03">
+          <h2
+            style="
+              font-size: 1.875rem;
+              color: var(--foreground);
+              margin-bottom: 3rem;
+              font-weight: bold;
+            "
+          >
+            Caso de Uso 03: Detectar Fallas
+          </h2>
+
+          <div class="diagram-step">
+            <h4>1. Diagrama de Secuencia del Caso de Uso</h4>
+            <div class="diagram-content">
+              <p>
+                El diagrama muestra la secuencia de mensajes de alto nivel entre
+                el Cliente y el Sistema, incluyendo la interacción con el
+                dispositivo físico ColdTrack, para generar la solicitud de
+                reparación.
+              </p>
+              <div class="card-img">
+                <iframe
+                  frameborder="0"
+                  style="width: 100%; height: 679px"
+                  src="https://viewer.diagrams.net/?tags=%7B%7D&lightbox=1&highlight=0000ff&edit=_blank&layers=1&nav=1&title=DSS-DetectarFalla.drawio&dark=0#Uhttps%3A%2F%2Fdrive.google.com%2Fuc%3Fid%3D1ArJR4o4lH2YxEuIbae595LMjYvDJCtHV%26export%3Ddownload"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+
+          <div class="diagram-step">
+            <h4>2. Contrato de la Operación: `crearSolicitudDeReparacion()`</h4>
+            <div class="diagram-content">
+              <p>
+                Este contrato estipula los cambios de estado necesarios en el
+                sistema tras la solicitud de reparación por parte del Cliente.
+              </p>
+              <table
+                style="width: 100%; border-collapse: collapse; margin-top: 1rem"
+              >
+                <tbody>
+                  <tr style="border-top: 1px solid var(--border)">
+                    <th
+                      style="
+                        text-align: left;
+                        vertical-align: top;
+                        padding: 0.75rem;
+                        width: 240px;
+                        color: var(--foreground);
+                      "
+                    >
+                      Operación
+                    </th>
+                    <td
+                      style="padding: 0.75rem; color: var(--muted-foreground)"
+                    >
+                      crearSolicitudDeReparacion(idCliente, idEqFrio, falla)
+                    </td>
+                  </tr>
+                  <tr style="border-top: 1px solid var(--border)">
+                    <th
+                      style="
+                        text-align: left;
+                        vertical-align: top;
+                        padding: 0.75rem;
+                        color: var(--foreground);
+                      "
+                    >
+                      Precondiciones
+                    </th>
+                    <td
+                      style="padding: 0.75rem; color: var(--muted-foreground)"
+                    >
+                      Se detectó una falla en el equipo de frío.
+                    </td>
+                  </tr>
+                  <tr style="border-top: 1px solid var(--border)">
+                    <th
+                      style="
+                        text-align: left;
+                        vertical-align: top;
+                        padding: 0.75rem;
+                        color: var(--foreground);
+                      "
+                    >
+                      Postcondiciones
+                    </th>
+                    <td
+                      style="padding: 0.75rem; color: var(--muted-foreground)"
+                    >
+                      <ul
+                        style="
+                          margin: 0;
+                          padding-left: 1rem;
+                          list-style-type: circle;
+                        "
+                      >
+                        <li style="margin-bottom: 0.5rem">
+                          Se creó una instancia de
+                          <strong>Solicitud De Reparación</strong>
+                          (<code>solicitud</code>). (Creación de instancia)
+                        </li>
+                        <li style="margin-bottom: 0.5rem">
+                          <code>solicitud</code> se asoció con
+                          <strong>Cliente</strong> y con <strong>Falla</strong>.
+                          (Asociación formada)
+                        </li>
+                        <li style="margin-bottom: 0.5rem">
+                          <code>solicitud.fecha</code> pasó a ser
+                          <code>fechaActual</code>. (Modificación de atributo)
+                        </li>
+                        <li style="margin-bottom: 0.5rem">
+                          <code>solicitud.descripcion</code> pasó a ser
+                          <code>descripcionFalla</code>. (Modificación de
+                          atributo)
+                        </li>
+                      </ul>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="diagram-step">
+            <h4>3. Diagrama de Colaboración de la Operación</h4>
+            <div class="diagram-content">
+              <p>
+                El proceso inicia en el
+                <strong>Controlador de Casos de Uso</strong>, que invoca al
+                <strong>GestorSolicitudReparación</strong> para coordinar la
+                búsqueda del <strong>Cliente</strong> y del
+                <strong>Equipo de Frío</strong> mediante el
+                <strong>Repositorio</strong>, siguiendo el patrón repositorio.
+                Con la información obtenida y la falla detectada, el gestor crea
+                una nueva instancia de
+                <strong>Solicitud de Reparación</strong> y finalmente la guarda
+                en el repositorio, completando así el flujo de creación de la
+                solicitud.
+              </p>
+              <div class="card-img">
+                <iframe
+                  frameborder="0"
+                  style="width: 100%; height: 636px"
+                  src="https://viewer.diagrams.net/?tags=%7B%7D&lightbox=1&highlight=0000ff&edit=_blank&layers=1&nav=1&title=Copia%20de%20Colaboracion(CU03)-DF.drawio&dark=0#Uhttps%3A%2F%2Fdrive.google.com%2Fuc%3Fid%3D1XNiNL65GRRH_R0ia_Hv8_I26YNfZJgDV%26export%3Ddownload"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="diagram-section" id="uc06">
+          <h2
+            style="
+              font-size: 1.875rem;
+              color: var(--foreground);
+              margin-bottom: 3rem;
+              font-weight: bold;
+            "
+          >
+            Caso de Uso 06: Gestionar Presupuesto
+          </h2>
+
+          <div class="diagram-step">
+            <h4>1. Diagrama de Secuencia del Caso de Uso</h4>
+            <div class="diagram-content">
+              <p>
+                El diagrama detalla el flujo de mensajes entre el Proveedor y el
+                Sistema, enfocándose en la captura de datos (costos, tiempos)
+                para generar un presupuesto en respuesta a una Solicitud de
+                Reparación aprobada.
+              </p>
+              <div class="card-img">
+                <p
+                  style="color: var(--muted-foreground); text-align: center"
+                ></p>
+                <p
+                  style="
+                    color: var(--muted-foreground);
+                    text-align: center;
+                    margin-top: 1rem;
+                    font-style: italic;
+                  "
+                >
+                  (Referencia: TFI - 1er Avance, pág. 30)
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="diagram-step">
+            <h4>2. Contrato de la Operación: `ingresarDatos()`</h4>
+            <div class="diagram-content">
+              <p>
+                Este contrato se enfoca en la creación de la instancia del
+                Presupuesto y la asignación de sus atributos basados en la
+                información suministrada por el Proveedor.
+              </p>
+              <ul style="padding-left: 1.5rem; margin-top: 1rem">
+                <li style="margin-bottom: 0.5rem; color: var(--foreground)">
+                  **Operación:** `Crear ingresar Datos (herramientas,
+                  materiales, costos, tiempo)`
+                </li>
+                <li style="margin-bottom: 0.5rem; color: var(--foreground)">
+                  **Precondiciones:** Se seleccionó una solicitud de presupuesto
+                  para analizar.
+                </li>
+                <li style="margin-bottom: 0.5rem; color: var(--foreground)">
+                  **Postcondiciones:**
+                  <ul
+                    style="
+                      padding-left: 1.5rem;
+                      margin-top: 0.5rem;
+                      list-style-type: circle;
+                    "
+                  >
+                    <li style="color: var(--muted-foreground)">
+                      Se crea una instancia de **Presupuesto** (`p`). (Creación
+                      de instancia)
+                    </li>
+                    <li style="color: var(--muted-foreground)">
+                      `p` se asoció a **Solicitud de Reparación** actual.
+                      (Asociación formada)
+                    </li>
+                    <li style="color: var(--muted-foreground)">
+                      Se inicializaron los atributos de `p` (`detalleInsumo`,
+                      `precioInsumo`, `precioManoObra`, `tiempoEstimado`,
+                      `precioTotal`) con los parámetros recibidos. (Modificación
+                      de atributo)
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="diagram-step">
+            <h4>3. Diagrama de Colaboración de la Operación</h4>
+            <div class="diagram-content">
+              <p>
+                El DC mostraría cómo el objeto **:Proveedor** (Controlador de
+                Casos de Uso) recibe el mensaje `ingresarDatos()` y, aplicando
+                el patrón **Creador**, crea la instancia **:Presupuesto**.
+                Adicionalmente, aplicaría el patrón **Experto** para asignar a
+                la instancia **:Presupuesto** la responsabilidad de calcular el
+                `precioTotal` a partir de sus atributos internos.
+              </p>
+              <div class="card-img">
+                <p
+                  style="color: var(--muted-foreground); text-align: center"
+                ></p>
+                <p
+                  style="
+                    color: var(--muted-foreground);
+                    text-align: center;
+                    margin-top: 1rem;
+                    font-style: italic;
+                  "
+                >
+                  (Diagrama de Colaboración realizado por el grupo)
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="diagram-section" id="uc08">
+          <h2
+            style="
+              font-size: 1.875rem;
+              color: var(--foreground);
+              margin-bottom: 3rem;
+              font-weight: bold;
+            "
+          >
+            Caso de Uso 08: Asignar Técnico
+          </h2>
+
+          <div class="diagram-step">
+            <h4>1. Diagrama de Secuencia del Caso de Uso</h4>
+            <div class="diagram-content">
+              <p>
+                El diagrama ilustra el proceso interno donde el Proveedor
+                selecciona un técnico registrado y el sistema realiza la
+                asignación, notificando al técnico y actualizando el estado de
+                la solicitud.
+              </p>
+              <div class="card-img">
+                <p
+                  style="color: var(--muted-foreground); text-align: center"
+                ></p>
+                <p
+                  style="
+                    color: var(--muted-foreground);
+                    text-align: center;
+                    margin-top: 1rem;
+                    font-style: italic;
+                  "
+                >
+                  (Referencia: TFI - 1er Avance, pág. 31)
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="diagram-step">
+            <h4>2. Contrato de la Operación: `seleccionarTecnico()`</h4>
+            <div class="diagram-content">
+              <p>
+                Este contrato define la formalización de la Orden de Reparación
+                y la asociación del técnico elegido a dicha orden, un paso
+                crítico para el inicio del trabajo.
+              </p>
+              <ul style="padding-left: 1.5rem; margin-top: 1rem">
+                <li style="margin-bottom: 0.5rem; color: var(--foreground)">
+                  **Operación:** `Crear seleccionar Tecnico()`
+                </li>
+                <li style="margin-bottom: 0.5rem; color: var(--foreground)">
+                  **Precondiciones:** Existe una orden de reparación creada. El
+                  técnico tiene que estar registrado en el sistema.
+                </li>
+                <li style="margin-bottom: 0.5rem; color: var(--foreground)">
+                  **Postcondiciones:**
+                  <ul
+                    style="
+                      padding-left: 1.5rem;
+                      margin-top: 0.5rem;
+                      list-style-type: circle;
+                    "
+                  >
+                    <li style="color: var(--muted-foreground)">
+                      Se crea una instancia de **Orden de Reparación** (`odr`).
+                      (Creación de instancia)
+                    </li>
+                    <li style="color: var(--muted-foreground)">
+                      `odr` se asoció a **Solicitud de Reparación**. (Asociación
+                      formada)
+                    </li>
+                    <li style="color: var(--muted-foreground)">
+                      `odr` se asoció a **Técnico**. (Asociación formada)
+                    </li>
+                    <li style="color: var(--muted-foreground)">
+                      La **Solicitud de Reparación** cambia su estado a "Técnico
+                      Asignado". (Modificación de atributo)
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="diagram-step">
+            <h4>3. Diagrama de Colaboración de la Operación</h4>
+            <div class="diagram-content">
+              <p>
+                El DC ilustraría cómo el objeto **:Proveedor** (actuando como
+                Controlador) coordina los mensajes. Utilizando el patrón
+                **Experto** en la clase **:OrdenDeReparacion** (ya que posee la
+                asociación con `Técnico` y `SolicitudDeReparacion`), se le
+                asigna la responsabilidad de vincular al técnico seleccionado y
+                actualizar su estado, promoviendo el bajo acoplamiento en el
+                sistema.
+              </p>
+              <div class="card-img">
+                <p
+                  style="color: var(--muted-foreground); text-align: center"
+                ></p>
+                <p
+                  style="
+                    color: var(--muted-foreground);
+                    text-align: center;
+                    margin-top: 1rem;
+                    font-style: italic;
+                  "
+                >
+                  (Diagrama de Colaboración realizado por el grupo)
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-left">
+          <div class="footer-logo">
+            <div class="logo-icon">UTN</div>
+            <div class="logo-text">
+              <p class="university-name">Universidad Tecnológica Nacional</p>
+              <p class="faculty-name">Facultad Regional Tucumán</p>
+            </div>
+          </div>
+        </div>
+        <div class="footer-right">
+          <p class="group-name">Grupo N° TFI (3K02)</p>
+          <p class="subject-name">Cátedra de Diseño de Sistemas</p>
+          <p class="year">2025</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.9.3/tsparticles.bundle.min.js"></script>
+  </body>
+</html>
