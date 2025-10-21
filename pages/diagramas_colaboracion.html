@@ -365,66 +365,126 @@
                 Reparación aprobada.
               </p>
               <div class="card-img">
-                <p
-                  style="color: var(--muted-foreground); text-align: center"
-                ></p>
-                <p
-                  style="
-                    color: var(--muted-foreground);
-                    text-align: center;
-                    margin-top: 1rem;
-                    font-style: italic;
-                  "
-                >
-                  (Referencia: TFI - 1er Avance, pág. 30)
-                </p>
+                <iframe
+                  frameborder="0"
+                  style="width: 100%; height: 581px"
+                  src="https://viewer.diagrams.net/?tags=%7B%7D&lightbox=1&highlight=0000ff&edit=_blank&layers=1&nav=1&title=DSS-GestionarPresupuestos.drawio&dark=0#Uhttps%3A%2F%2Fdrive.google.com%2Fuc%3Fid%3D1w2b5qsd3yBp0QBOzqZynWzI8xu1Y-F6B%26export%3Ddownload"
+                ></iframe>
               </div>
             </div>
           </div>
 
           <div class="diagram-step">
-            <h4>2. Contrato de la Operación: `ingresarDatos()`</h4>
+            <h4>2. Contrato de la Operación: `crearPresupuesto()`</h4>
             <div class="diagram-content">
               <p>
                 Este contrato se enfoca en la creación de la instancia del
                 Presupuesto y la asignación de sus atributos basados en la
                 información suministrada por el Proveedor.
               </p>
-              <ul style="padding-left: 1.5rem; margin-top: 1rem">
-                <li style="margin-bottom: 0.5rem; color: var(--foreground)">
-                  **Operación:** `Crear ingresar Datos (herramientas,
-                  materiales, costos, tiempo)`
-                </li>
-                <li style="margin-bottom: 0.5rem; color: var(--foreground)">
-                  **Precondiciones:** Se seleccionó una solicitud de presupuesto
-                  para analizar.
-                </li>
-                <li style="margin-bottom: 0.5rem; color: var(--foreground)">
-                  **Postcondiciones:**
-                  <ul
-                    style="
-                      padding-left: 1.5rem;
-                      margin-top: 0.5rem;
-                      list-style-type: circle;
-                    "
-                  >
-                    <li style="color: var(--muted-foreground)">
-                      Se crea una instancia de **Presupuesto** (`p`). (Creación
-                      de instancia)
-                    </li>
-                    <li style="color: var(--muted-foreground)">
-                      `p` se asoció a **Solicitud de Reparación** actual.
-                      (Asociación formada)
-                    </li>
-                    <li style="color: var(--muted-foreground)">
-                      Se inicializaron los atributos de `p` (`detalleInsumo`,
-                      `precioInsumo`, `precioManoObra`, `tiempoEstimado`,
-                      `precioTotal`) con los parámetros recibidos. (Modificación
-                      de atributo)
-                    </li>
-                  </ul>
-                </li>
-              </ul>
+              <table
+                style="width: 100%; border-collapse: collapse; margin-top: 1rem"
+              >
+                <tbody>
+                  <tr style="border-top: 1px solid var(--border)">
+                    <th
+                      style="
+                        text-align: left;
+                        vertical-align: top;
+                        padding: 0.75rem;
+                        width: 240px;
+                        color: var(--foreground);
+                      "
+                    >
+                      Operación
+                    </th>
+                    <td
+                      style="padding: 0.75rem; color: var(--muted-foreground)"
+                    >
+                      crearPresupuesto(idProv, idOrdRep, insumos, manoObra,
+                      tiempoEstimado, precioTotal)
+                    </td>
+                  </tr>
+                  <tr style="border-top: 1px solid var(--border)">
+                    <th
+                      style="
+                        text-align: left;
+                        vertical-align: top;
+                        padding: 0.75rem;
+                        color: var(--foreground);
+                      "
+                    >
+                      Precondiciones
+                    </th>
+                    <td
+                      style="padding: 0.75rem; color: var(--muted-foreground)"
+                    >
+                      Se seleccionó una solicitud de presupuesto para responder.
+                    </td>
+                  </tr>
+                  <tr style="border-top: 1px solid var(--border)">
+                    <th
+                      style="
+                        text-align: left;
+                        vertical-align: top;
+                        padding: 0.75rem;
+                        color: var(--foreground);
+                      "
+                    >
+                      Postcondiciones
+                    </th>
+                    <td
+                      style="padding: 0.75rem; color: var(--muted-foreground)"
+                    >
+                      <ul
+                        style="
+                          margin: 0;
+                          padding-left: 1rem;
+                          list-style-type: circle;
+                        "
+                      >
+                        <li style="margin-bottom: 0.5rem">
+                          Se creó una instancia de
+                          <strong>Presupuesto</strong> (<code>p</code>).
+                          (Creación de instancia)
+                        </li>
+                        <li style="margin-bottom: 0.5rem">
+                          <code>p</code> se asoció a la
+                          <strong>Orden de Reparación</strong> actual.
+                          (Asociación formada)
+                        </li>
+                        <li style="margin-bottom: 0.5rem">
+                          <code>p</code> se asoció al
+                          <strong>Proveedor</strong> actual. (Asociación
+                          formada)
+                        </li>
+                        <li style="margin-bottom: 0.5rem">
+                          <code>p.detalleInsumo</code> pasó a ser
+                          <code>detalleInsumo</code>. (Modificación de atributo)
+                        </li>
+                        <li style="margin-bottom: 0.5rem">
+                          <code>p.precioInsumo</code> pasó a ser
+                          <code>precioInsumo</code>. (Modificación de atributo)
+                        </li>
+                        <li style="margin-bottom: 0.5rem">
+                          <code>p.precioManoObra</code> pasó a ser
+                          <code>precioManoObra</code>. (Modificación de
+                          atributo)
+                        </li>
+                        <li style="margin-bottom: 0.5rem">
+                          <code>p.tiempoEstimado</code> pasó a ser
+                          <code>tiempoEstimado</code>. (Modificación de
+                          atributo)
+                        </li>
+                        <li style="margin-bottom: 0.5rem">
+                          <code>p.precioTotal</code> pasó a ser
+                          <code>precioTotal</code>. (Modificación de atributo)
+                        </li>
+                      </ul>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
 
